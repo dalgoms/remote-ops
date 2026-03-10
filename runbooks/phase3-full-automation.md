@@ -7,7 +7,7 @@ Notion 등록 -> 코딩 -> 배포 -> 결과 회신까지 전부 자동.
 ## 전제 조건
 
 - Phase 1 완료 (Telegram + Make.com)
-- Phase 2 완료 (Claude Code Action + GitHub Issue 연동)
+- Phase 2 완료 (GPT Codex Action + GitHub Issue 연동)
 
 ---
 
@@ -22,7 +22,7 @@ Notion 등록 -> 코딩 -> 배포 -> 결과 회신까지 전부 자동.
 
 ### 사용법
 
-- Claude가 만든 PR에 `auto-merge` 라벨 추가 → 빌드 성공 시 자동 머지
+- Codex가 만든 PR에 `auto-merge` 라벨 추가 → 빌드 성공 시 자동 머지
 - Priority가 urgent/high인 작업은 라벨 안 붙이고 수동 리뷰
 
 ---
@@ -78,8 +78,8 @@ Claude가 해결하지 못한 작업은:
 폰에서 Notion Inbox 등록
     ↓ (Make.com, 즉시)
 Telegram 알림 + GitHub Issue 생성
-    ↓ (Claude Code Action, 1-5분)
-Claude가 코드 작성 → PR 생성
+    ↓ (GPT Codex Action, 1-5분)
+GPT Codex가 코드 작성 → PR 생성
     ↓ (자동 머지, 빌드 성공 시)
 Vercel 자동 배포
     ↓ (deploy-notify, 즉시)
@@ -99,5 +99,5 @@ Notion Inbox 자동 업데이트 (Done + Output Link)
 | 빌드 성공 + auto-merge 라벨 | 자동 머지 → 배포 |
 | 빌드 성공 + 라벨 없음 | PR 대기 (수동 리뷰) |
 | 빌드 실패 | Telegram 에러 알림 |
-| Claude 실패 | needs-human 라벨 + 알림 |
+| Codex 실패 | needs-human 라벨 + 알림 |
 | Priority urgent/high | 자동 머지 안 함, 리뷰 요청 |
